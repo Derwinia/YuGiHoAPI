@@ -1,0 +1,70 @@
+<div>
+  <input type="text" [(ngModel)]="cardNameInput">
+  <button (click)="getCard(cardNameInput,language)">Search details</button>
+  <button (click)="changeLanguage('en')"><img class="flag"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/langfr-225px-Flag_of_the_United_States.svg.png"></button>
+  <button (click)="changeLanguage('fr')"><img class="flag"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931974%2C_2020%E2%80%93present%29.svg/langfr-225px-Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931974%2C_2020%E2%80%93present%29.svg.png"></button>
+  <button (click)="changeLanguage('it')"><img class="flag"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/langfr-225px-Flag_of_Italy.svg.png"></button>
+  <button (click)="changeLanguage('de')"><img class="flag"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/langfr-225px-Flag_of_Germany.svg.png"></button>
+  <button (click)="changeLanguage('pt')"><img class="flag"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/langfr-225px-Flag_of_Portugal.svg.png"></button>
+</div>
+<div class="content">
+  <div>
+    <img [src]="activeCard.card_images[0].image_url">
+  </div>
+  <div>
+    <ul>
+      <li>
+        id : {{activeCard.id}}
+      </li>
+      <li>
+        name : {{activeCard.name}}
+      </li>
+      <li>
+        level : {{activeCard.level}}
+      </li>
+      <li>
+        type : {{activeCard.type}}
+      </li>
+      <li>
+        description : {{activeCard.desc}}
+      </li>
+      <li>
+        attack : {{activeCard.atk}}
+      </li>
+      <li>
+        defence : {{activeCard.def}}
+      </li>
+      <li>
+        race : {{activeCard.race}}
+      </li>
+      <li>
+        attribute : {{activeCard.attribute}}
+      </li>
+    </ul>
+    <div>
+      <ul>
+        <li>
+          cardmarket_price: {{activeCard.card_prices[0].cardmarket_price}}
+        </li>
+        <li>
+          tcgplayer_price: {{activeCard.card_prices[0].tcgplayer_price}}
+        </li>
+        <li>
+          ebay_price: {{activeCard.card_prices[0].ebay_price}}
+        </li>
+        <li>
+          amazon_price: {{activeCard.card_prices[0].amazon_price}}
+        </li>
+        <li>
+          coolstuffinc_price : {{activeCard.card_prices[0].coolstuffinc_price}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
